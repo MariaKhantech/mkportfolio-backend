@@ -1,0 +1,52 @@
+{
+  "api": {
+    "resumeChatbotApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "HandleUserQueries"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "HandleUserQueries": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "resumedatadynamodb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_HandleUserQueries_notsureyet": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "HandleUserQueries"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "resumedatadynamodb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

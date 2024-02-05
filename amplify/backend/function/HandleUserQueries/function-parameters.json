@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "storage": {
+      "resumedatadynamodb": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "notsureyet",
+      "environmentVariableName": "notsureyet"
+    }
+  ]
+}

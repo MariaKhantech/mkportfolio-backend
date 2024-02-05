@@ -1,0 +1,10 @@
+{
+  "resourceName": "resumedatadynamodb",
+  "tableName": "ResumeChatbotFAQs",
+  "partitionKey": {
+    "fieldName": "QuestionID",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
