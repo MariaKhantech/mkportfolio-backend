@@ -17,8 +17,13 @@
       },
       "function": {
         "HandleUserQueries": {
-          "notsureyet": "none"
+          "notsureyet": "none",
+          "deploymentBucketName": "amplify-amplify8f895016aff94-staging-190206-deployment",
+          "s3Key": "amplify-builds/HandleUserQueries-31575573454e6e633164-build.zip"
         }
+      },
+      "api": {
+        "resumeChatbotApi": {}
       }
     }
   }

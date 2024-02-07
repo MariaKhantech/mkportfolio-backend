@@ -34,7 +34,23 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_HandleUserQueries_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "HandleUserQueries"
+        }
+      ]
+    },
     "AMPLIFY_function_HandleUserQueries_notsureyet": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "HandleUserQueries"
+        }
+      ]
+    },
+    "AMPLIFY_function_HandleUserQueries_s3Key": {
       "usedBy": [
         {
           "category": "function",
