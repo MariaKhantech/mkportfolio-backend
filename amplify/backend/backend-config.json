@@ -1,6 +1,6 @@
 {
   "api": {
-    "resumeChatbotApi": {
+    "chat": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,21 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "HandleUserQueries"
+          "resourceName": "handleChat"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "helloworld": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "helloWorld"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,50 +30,58 @@
     }
   },
   "function": {
-    "HandleUserQueries": {
+    "handleChat": {
       "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "StreamArn"
-          ],
-          "category": "storage",
-          "resourceName": "resumedatadynamodb"
-        }
-      ],
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "helloWorld": {
+      "build": true,
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_HandleUserQueries_deploymentBucketName": {
+    "AMPLIFY_function_handleChat_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "HandleUserQueries"
+          "resourceName": "handleChat"
         }
       ]
     },
-    "AMPLIFY_function_HandleUserQueries_notsureyet": {
+    "AMPLIFY_function_handleChat_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "HandleUserQueries"
+          "resourceName": "handleChat"
         }
       ]
     },
-    "AMPLIFY_function_HandleUserQueries_s3Key": {
+    "AMPLIFY_function_helloWorld_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "HandleUserQueries"
+          "resourceName": "helloWorld"
+        }
+      ]
+    },
+    "AMPLIFY_function_helloWorld_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "helloWorld"
         }
       ]
     }
   },
   "storage": {
+    "chatDynamo": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
     "resumedatadynamodb": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"

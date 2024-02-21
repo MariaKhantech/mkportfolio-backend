@@ -1,13 +1,25 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "resumeChatbotApi": {
+    "chat": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
+    "helloworld": {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"
     }
   },
   "function": {
-    "HandleUserQueries": {
+    "handleChat": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "helloWorld": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
@@ -16,6 +28,16 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
+    "chatDynamo": {
+      "Arn": "string",
+      "Name": "string",
+      "PartitionKeyName": "string",
+      "PartitionKeyType": "string",
+      "Region": "string",
+      "SortKeyName": "string",
+      "SortKeyType": "string",
+      "StreamArn": "string"
+    },
     "resumedatadynamodb": {
       "Arn": "string",
       "Name": "string",

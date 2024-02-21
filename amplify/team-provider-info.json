@@ -20,10 +20,45 @@
           "notsureyet": "none",
           "deploymentBucketName": "amplify-amplify8f895016aff94-staging-190206-deployment",
           "s3Key": "amplify-builds/HandleUserQueries-31575573454e6e633164-build.zip"
-        }
+        },
+        "resumedatadynamodb": {}
       },
       "api": {
         "resumeChatbotApi": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mkportfolio-dev-230340-authRole",
+      "UnauthRoleArn": "arn:aws:iam::099841327948:role/amplify-mkportfolio-dev-230340-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::099841327948:role/amplify-mkportfolio-dev-230340-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mkportfolio-dev-230340-deployment",
+      "UnauthRoleName": "amplify-mkportfolio-dev-230340-unauthRole",
+      "StackName": "amplify-mkportfolio-dev-230340",
+      "StackId": "arn:aws:cloudformation:us-east-1:099841327948:stack/amplify-mkportfolio-dev-230340/0b8a54a0-c637-11ee-bdd3-0afd30b946c5",
+      "AmplifyAppId": "d3tmb6pxx14915"
+    },
+    "categories": {
+      "function": {
+        "resumedatadynamodb": {},
+        "handleChat": {
+          "deploymentBucketName": "amplify-mkportfolio-dev-230340-deployment",
+          "s3Key": "amplify-builds/handleChat-447a354c2b37547a726e-build.zip"
+        },
+        "helloWorld": {
+          "deploymentBucketName": "amplify-mkportfolio-dev-230340-deployment",
+          "s3Key": "amplify-builds/helloWorld-6a624952655130347342-build.zip"
+        }
+      },
+      "storage": {
+        "resumedatadynamodb": {},
+        "chatDynamo": {}
+      },
+      "api": {
+        "chat": {},
+        "helloworld": {}
       }
     }
   }

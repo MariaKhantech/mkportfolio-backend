@@ -1,0 +1,14 @@
+{
+  "resourceName": "chatDynamo",
+  "tableName": "chatDynamo",
+  "partitionKey": {
+    "fieldName": "chat_i",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "value",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
